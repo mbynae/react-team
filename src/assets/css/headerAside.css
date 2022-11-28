@@ -1,0 +1,200 @@
+/** @format */
+
+.all {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 25px;
+}
+
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  height: 80px;
+  background-color: #fff;
+  padding-left: 100px;
+}
+
+.left {
+  width: 7%;
+  z-index: 10000;
+}
+.right {
+  width: 90%;
+}
+
+#header img {
+  width: 150px;
+  height: 30px;
+  margin-top: 26px;
+  transform: translate(0, 10px);
+  cursor: pointer;
+}
+
+/* -------------------------------- */
+#header_search {
+  position: absolute;
+  left: 46%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
+}
+#header_search.close {
+  visibility: hidden;
+  opacity: 0;
+}
+#header_search .roomSearch {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  /* gap: 10px; */
+  border: 1px solid #f1e3c4;
+  /* padding: 14px 10px; */
+  width: 840px;
+  height: 40px;
+  background: #fff;
+  border-radius: 20px;
+  color: #666;
+  font-size: 16px;
+}
+
+#header_search .roomSearch label {
+  font-size: 16px;
+  color: #666;
+}
+#header_search .roomSearch img {
+  width: 25px;
+  height: 25px;
+  margin: -20px 10px 0 10px;
+}
+
+#header_search .roomSearch .home {
+  width: 28%;
+}
+
+#header_search .roomSearch input {
+  /* width: 200%; */
+  height: 100%;
+  font-size: 16px;
+  color: #666;
+  background-color: inherit;
+  border: 0;
+}
+#header_search .roomSearch input:focus {
+  outline: 0;
+}
+#header_search #region {
+  width: 100%;
+}
+
+#header_search .roomSearch input[type="date"] {
+  position: relative;
+}
+#header_search input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 37%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  background: transparent;
+  z-index: 1;
+  padding-left: 120px;
+  cursor: pointer;
+}
+#header_search .date_hyphen {
+  margin-left: -15px;
+  margin-right: 5px;
+}
+
+#header_search .calender {
+  width: 33%;
+}
+
+#header_search .guest select {
+  border: 0;
+  font-size: 16px;
+  color: #666;
+  margin-right: 10px;
+  cursor: pointer;
+}
+#header_search .guest select:focus {
+  outline: none;
+}
+
+#header_search .home,
+#header_search .calender,
+#header_search .guest {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #f1e3c4;
+}
+#header_search .searchBtn {
+  background-color: inherit;
+  margin: 12px auto 0 auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* --------------------------------- */
+
+#aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 30px;
+  height: 100%;
+  cursor: pointer;
+  z-index: 10000;
+  overflow: hidden;
+  background-color: #fff;
+}
+#aside.active {
+  border-right: 1px solid rgb(241, 227, 196, 0.6);
+}
+
+.aside__inner .menu {
+  margin: 10px 0 18px 0;
+  width: 35px;
+  height: 25px;
+}
+
+.aside__inner .region {
+  z-index: 10000;
+}
+
+.aside__inner .region button {
+  display: block;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.aside__inner .region button img {
+  display: block;
+  width: 35px;
+  height: 35px;
+}
+.region_box {
+  background-color: #fff;
+  width: 200px;
+  height: 100%;
+  padding-right: 40px;
+  z-index: 9000;
+  transition: all 0.4s;
+  position: fixed;
+  left: -15%;
+  top: 0;
+  border-right: 1px solid rgb(241, 227, 196, 0.6);
+}
+.region_box .region_name {
+  margin-top: 156px;
+}
+.region_name li {
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 50px;
+  text-align: right;
+  cursor: pointer;
+}

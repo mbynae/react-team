@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App() {
+import Main from "./components/pages/Main";
+import Resion from "./components/pages/Resion";
+import Reservation from "./components/pages/Reservation";
+import Header from "./components/layout/Header";
+import Banner from "./components/layout/Banner";
+import Footer from "./components/layout/Footer";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="all score">
+        <div className="right">
+          <Header />
+          <Banner />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/resion" element={<Resion />} />
+            <Route path="/reservation" element={<Reservation />} />
+          </Routes>
+        </div>
+      </div>
+      <Footer />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

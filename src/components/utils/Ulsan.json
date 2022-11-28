@@ -1,0 +1,92 @@
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1669360973195,
+  "data": [
+    {
+      "id": "ChIJgd6y4osuZjURATHZM3P6g3A",
+      "location_name": "Ulsan, South Korea",
+      "terms": [
+        {
+          "offset": 0,
+          "value": "Ulsan"
+        },
+        {
+          "offset": 7,
+          "value": "South Korea"
+        }
+      ],
+      "country_code": "KR",
+      "countryCode": "KR",
+      "display_name": "Ulsan, South Korea"
+    },
+    {
+      "id": "ChIJgd6y4osuZjURATHZM3P6g3A",
+      "location_name": "Ulsan, South Korea",
+      "terms": [
+        {
+          "offset": 0,
+          "value": "Ulsan"
+        },
+        {
+          "offset": 7,
+          "value": "South Korea"
+        }
+      ],
+      "country_code": "KR",
+      "countryCode": "KR",
+      "display_name": "Ulsan, South Korea stays"
+    },
+    {
+      "id": "ChIJgd6y4osuZjURATHZM3P6g3A",
+      "location_name": "Ulsan, South Korea",
+      "terms": [
+        {
+          "offset": 0,
+          "value": "Ulsan"
+        },
+        {
+          "offset": 7,
+          "value": "South Korea"
+        }
+      ],
+      "country_code": "KR",
+      "countryCode": "KR",
+      "display_name": "Ulsan, South Korea experiences"
+    },
+    {
+      "id": "ChIJzUYbGDEtZjURqq7OrU69rdw",
+      "location_name": "Ulsan Nam-gu",
+      "terms": [
+        {
+          "offset": 0,
+          "value": "Ulsan"
+        },
+        {
+          "offset": 6,
+          "value": "Nam-gu"
+        }
+      ],
+      "country_code": "KR",
+      "countryCode": "KR",
+      "display_name": "Ulsan Nam-gu"
+    },
+    {
+      "id": "ChIJq4qx4luSll0RUeihxGubDJs",
+      "location_name": "Ulan Batur, Mongolia",
+      "terms": [
+        {
+          "offset": 0,
+          "value": "Ulan Batur"
+        },
+        {
+          "offset": 12,
+          "value": "Mongolia"
+        }
+      ],
+      "country_code": "MN",
+      "countryCode": "MN",
+      "display_name": "Ulan Batur, Mongolia"
+    }
+  ]
+}
