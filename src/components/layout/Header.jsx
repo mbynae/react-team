@@ -26,7 +26,7 @@ const Header = () => {
         <>
             <header id="header">
                 <Link to="/">
-                    <img src="img/logo.png" alt="로고이미지" />
+                    <img src="/img/logo.png" alt="로고이미지" />
                 </Link>
                 <form
                     action="/"
@@ -38,7 +38,7 @@ const Header = () => {
                         <legend className="ir">호텔 검색</legend>
                         <div className="home">
                             <label htmlFor="region"></label>
-                            <img src="img/home.svg" alt="집이미지" />
+                            <img src="/img/home.svg" alt="집이미지" />
                             <input
                                 type="text"
                                 id="region"
@@ -48,7 +48,7 @@ const Header = () => {
                             />
                         </div>
                         <div className="calender">
-                            <img src="img/calender.svg" alt="달력이미지" />
+                            <img src="/img/calender.svg" alt="달력이미지" />
                             <input
                                 type="date"
                                 id="start_date"
@@ -66,7 +66,7 @@ const Header = () => {
                             />
                         </div>
                         <div className="guest">
-                            <img src="img/person.svg" alt="사람이미지" />
+                            <img src="/img/person.svg" alt="사람이미지" />
                             <label htmlFor="room">객실</label>
                             <select id="room" name="room" required>
                                 <option defaultValue="1개">1개</option>
@@ -85,7 +85,7 @@ const Header = () => {
                             </select>
                         </div>
                         <button className="searchBtn">
-                            <img src="img/search.svg" alt="검색이미지" />
+                            <img src="/img/search.svg" alt="검색이미지" />
                         </button>
                     </fieldset>
                 </form>

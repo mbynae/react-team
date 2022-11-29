@@ -1,75 +1,12 @@
 /** @format */
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-
-const mainText = [
-    {
-        imgName: "resion01.jpg",
-        resionName: "서울",
-        resionCode: "Seoul",
-    },
-    {
-        imgName: "resion02.jpg",
-        resionName: "경기",
-        resionCode: "Gyeonggi-do",
-    },
-    {
-        imgName: "resion03.jpg",
-        resionName: "인천",
-        resionCode: "Incheon",
-    },
-    {
-        imgName: "resion04.jpg",
-        resionName: "대구",
-        resionCode: "Daegu",
-    },
-    {
-        imgName: "resion05.jpg",
-        resionName: "대전",
-        resionCode: "Daejeon",
-    },
-    {
-        imgName: "resion06.jpg",
-        resionName: "광주",
-        resionCode: "Gwangju",
-    },
-    {
-        imgName: "resion07.jpg",
-        resionName: "울산",
-        resionCode: "Ulsan",
-    },
-    {
-        imgName: "resion08.jpg",
-        resionName: "세종",
-        resionCode: "Sejong",
-    },
-    {
-        imgName: "resion09.jpg",
-        resionName: "경주",
-        resionCode: "Gyeongju",
-    },
-    {
-        imgName: "resion10.jpg",
-        resionName: "강원",
-        resionCode: "Gangwon-do",
-    },
-    {
-        imgName: "resion11.jpg",
-        resionName: "부산",
-        resionCode: "Busan",
-    },
-    {
-        imgName: "resion12.jpg",
-        resionName: "제주",
-        resionCode: "Jeonju",
-    },
-];
+import { mainText } from "../utils/maintext";
 
 function MainTextName({ imgName, resionName, resionCode }) {
     return (
         <div className="resion">
-            <Link to="/resion" resionCode={resionCode}>
+            <Link to={`/resion/${resionCode}`}>
                 <img src={`img/${imgName}`} alt={resionName} />
             </Link>
             <span>{resionName}</span>
@@ -101,7 +38,7 @@ const MainCont = () => {
                         <div className="card card1">
                             <Link to="/reservation">
                                 <img
-                                    src="img/mainCard01.jpg"
+                                    src="/img/mainCard01.jpg"
                                     alt="서울시그니엘"
                                 />
                             </Link>
@@ -113,7 +50,7 @@ const MainCont = () => {
                         <div className="card card2">
                             <Link to="/reservation">
                                 <img
-                                    src="img/mainCard02.jpg"
+                                    src="/img/mainCard02.jpg"
                                     alt="제주 그랜드 하얏트"
                                 />
                             </Link>
@@ -125,7 +62,7 @@ const MainCont = () => {
                         <div className="cardCenter card3">
                             <Link to="/reservation">
                                 <img
-                                    src="img/mainCard03.jpg"
+                                    src="/img/mainCard03.jpg"
                                     alt="서울 신라 호텔"
                                 />
                             </Link>
@@ -137,7 +74,7 @@ const MainCont = () => {
                         <div className="card card4">
                             <Link to="/reservation">
                                 <img
-                                    src="img/mainCard04.jpg"
+                                    src="/img/mainCard04.jpg"
                                     alt="대구 디지털 하우스"
                                 />
                             </Link>
@@ -149,7 +86,7 @@ const MainCont = () => {
                         <div className="card card5">
                             <Link to="/reservation">
                                 <img
-                                    src="img/mainCard05.jpg"
+                                    src="/img/mainCard05.jpg"
                                     alt="부산 파라다이스 호텔"
                                 />
                             </Link>

@@ -5,7 +5,7 @@ import React from "react";
 const Banner = () => {
     return (
         <section id="bannerType">
-            <img src="img/banner.jpg" alt="배너이미지" />
+            <img src="/img/banner.jpg" alt="배너이미지" />
             <div className="bannerInput">
                 <h2 className="poppins">Find your travel moments and leave!</h2>
                 <form action="/" method="GET">
@@ -13,7 +13,7 @@ const Banner = () => {
                         <legend className="ir">호텔 검색</legend>
                         <div className="home">
                             <label htmlFor="region"></label>
-                            <img src="img/home.svg" alt="집이미지" />
+                            <img src="/img/home.svg" alt="집이미지" />
                             <input
                                 type="text"
                                 id="region"
@@ -23,7 +23,7 @@ const Banner = () => {
                             />
                         </div>
                         <div className="calender">
-                            <img src="img/calender.svg" alt="달력이미지" />
+                            <img src="/img/calender.svg" alt="달력이미지" />
                             <input
                                 type="date"
                                 id="start_date"
@@ -42,7 +42,7 @@ const Banner = () => {
                             {/* <span>11/18 금 - 11/19 토</span>  */}
                         </div>
                         <div className="guest">
-                            <img src="img/person.svg" alt="사람이미지" />
+                            <img src="/img/person.svg" alt="사람이미지" />
                             <label htmlFor="room">객실</label>
                             <select id="room" name="room" required>
                                 <option defaultValue="1개">1개</option>
@@ -62,7 +62,7 @@ const Banner = () => {
                             </select>
                         </div>
                         <button className="searchBtn">
-                            <img src="img/search.svg" alt="검색이미지" />
+                            <img src="/img/search.svg" alt="검색이미지" />
                         </button>
                     </fieldset>
                 </form>

@@ -1,4 +1,6 @@
 /** @format */
+import React from "react";
+import { useParams } from "react-router-dom";
 
 const resionText = [
     {
@@ -145,7 +147,7 @@ const resionText = [
 function ResionTextName({ classTitle, imgName, title, bed, price1, price2 }) {
     return (
         <div className={`resionTopCard ${classTitle}`}>
-            <img src={`img/${imgName}`} alt="호텔룸" />
+            <img src={`/img/${imgName}`} alt="호텔룸" />
             <div className="resionDesc">
                 <div className="descTitle">{title}</div>
                 <div className="bed">{bed}</div>
@@ -172,16 +174,17 @@ function ResionTextName2({ img, Title, star, bed, price2 }) {
 }
 
 const ResionCont = ({ selectCategory }) => {
+    const { resionCode } = useParams();
     return (
         <section id="contentsType" className="container">
             <div className="resionTop">
-                <h2>Recommended Hotels in Seoul</h2>
+                <h2>Recommended Hotels in {resionCode}</h2>
                 <div className="checkinDate">
-                    <img src="img/resionCalender.svg" alt="달력" />
+                    <img src="/img/resionCalender.svg" alt="달력" />
                     Wed 11/17
                 </div>
                 <div className="checkoutDate">
-                    <img src="img/resionCalender.svg" alt="달력" />
+                    <img src="/img/resionCalender.svg" alt="달력" />
                     Wed 11/18
                 </div>
                 <div className="resion__inner">
@@ -198,7 +201,7 @@ const ResionCont = ({ selectCategory }) => {
                     ))}
                 </div>
                 <div className="resionBom__card">
-                    <h2>서울 인근 숙소</h2>
+                    <h2>{resionCode} 인근 숙소</h2>
                     <div className="resionbomDate">
                         11월 17일 목 ~ 11월 18일 금
                     </div>

@@ -2,9 +2,12 @@
 
 import React from "react";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ResionCont from "../layout/ResionCont";
+import Loader from "../layout/Loader";
 
-const Resion = ({ resionCode }) => {
+const Resion = () => {
+    const { resionCode } = useParams();
     const [selectCategory, setSelectCategory] = useState([]);
 
     useEffect(() => {
@@ -12,10 +15,12 @@ const Resion = ({ resionCode }) => {
             `https://raw.githubusercontent.com/Kim-chanmi/react-team/main/src/components/utils/${resionCode}.json`
         )
             .then((response) => response.json())
-            // .then((result) => setSelectCategory(result.data))
-            .then((result) => console.log(result.data))
+            .then((result) => setSelectCategory(result.data))
+            // .then((result) => console.log(result.data))
             .catch((error) => console.log("error", error));
     }, []);
+
+    if (!selectCategory) return <Loader />;
 
     // 임시 스크립트(airbnb api로 넘어갈시 삭제)
     const resionBomCard = document.querySelectorAll(".resionBomCard");

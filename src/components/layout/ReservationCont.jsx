@@ -1,7 +1,9 @@
 /** @format */
 
 import React from "react";
-import Aside from "./Aside";
+import KakaoMap from "./KakaoMap";
+
+// { useRef, useEffect }
 
 const reservationText = [
     {
@@ -21,13 +23,56 @@ const reservationText = [
 function ReservationTextName({ imgName, location }) {
     return (
         <div className="package">
-            <img src={`img/${imgName}`} alt="호텔룸" />
+            <img src={`/img/${imgName}`} alt="호텔룸" />
             <div className="name">{location}</div>
         </div>
     );
 }
 
 const ReservationCont = () => {
+    // export const Map = () => {
+    //   const { kakao } = window;
+    //   const mapRef = useRef<HTMLDivElement>(null);
+    //   useEffect(() => {
+    //     const container = mapRef.current;
+    //     const options = {
+    //       center: new kakao.maps.LatLng(33.450701, 126.570667),
+    //       level: 5,
+    //     };
+    //     // 지도 객체 생성
+    //     const map = new kakao.maps.Map(container, options);
+
+    //   }, []);
+
+    //   return (
+    //     <>
+    //       <Div ref={mapRef}></Div>
+    //     </>
+    //   )
+    // }
+
+    // const Div = styled.div`
+    //   width: 100vw;
+    //   height: 100vh;
+    // `;
+
+    // const { kakao } = window;
+
+    // let container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
+    // let options = {
+    //   //지도를 생성할 때 필요한 기본 옵션
+    //   center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+    //   level: 3, //지도의 레벨(확대, 축소 정도)
+    // };
+
+    // let map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+    // const mapRef = useRef < HTMLDivElement > null;
+    // useEffect(() => {
+    //   const container = mapRef.current;
+    //   console.log(container);
+    // }, [mapRef]);
+
     return (
         <section id="contentsType" className="container">
             <div className="reservation__wrap">
@@ -36,7 +81,7 @@ const ReservationCont = () => {
                         <div
                             className="reservation_img"
                             style={{
-                                backgroundImage: `url(${"img/reservation.jpg"})`,
+                                backgroundImage: `url(${"/img/reservation.jpg"})`,
                                 backgroundRepeat: "no-repeat",
                                 backgroundPosition: "center",
                                 backgroundSize: "cover",
@@ -169,7 +214,7 @@ const ReservationCont = () => {
                     </div>
                     <div className="room__place">
                         <h2>위치</h2>
-                        <img src="img/map.jpg" alt="지도" />
+                        <KakaoMap />
                     </div>
                 </div>
             </div>

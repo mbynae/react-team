@@ -21,7 +21,10 @@ const App = () => {
                     <Banner />
                     <Routes>
                         <Route path="/" element={<Main />} />
-                        <Route path="/resion" element={<Resion />} />
+                        <Route
+                            path="/resion/:resionCode"
+                            element={<Resion />}
+                        />
                         <Route path="/reservation" element={<Reservation />} />
                     </Routes>
                 </div>
