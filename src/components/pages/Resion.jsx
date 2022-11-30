@@ -18,7 +18,7 @@ const Resion = () => {
             .then((result) => setSelectCategory(result.data))
             // .then((result) => console.log(result.data))
             .catch((error) => console.log("error", error));
-    }, []);
+    }, [resionCode]);
 
     if (!selectCategory) return <Loader />;
 
