@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-// import KakaoMap from "./KakaoMap";
+import KakaoMap from "./KakaoMap";
 
 // { useRef, useEffect }
 
@@ -214,7 +214,7 @@ const ReservationCont = () => {
                     </div>
                     <div className="room__place">
                         <h2>위치</h2>
-                        {/* <KakaoMap /> */}
+                        <KakaoMap />
                     </div>
                 </div>
             </div>
