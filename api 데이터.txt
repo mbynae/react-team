@@ -1,0 +1,106 @@
+랭귀지
+id:"ko-KR"
+title:"Korean (South Korea)"
+
+
+카테고리
+id:"TAB_8253"
+title:"Luxe"
+image:"https://a0.muscache.com/pictures/c8e2ed05-c666-47b6-99fc-4cb6edcde6b4.jpg"
+
+id:"TAB_8538"
+title:"B&B"
+image:"https://a0.muscache.com/pictures/5ed8f7c7-2e1f-43a8-9a39-4edfc81a3325.jpg"
+
+
+화폐
+code:"KRW"
+id:"KRW"
+localized_full_name:"South Korean won"
+name:"South Korean Won"
+symbol:"₩"
+unicode_symbol:"₩"
+is_eligible_for_guest:true
+is_eligible_for_lys:true
+
+
+속성 타입
+title:"호텔"
+id:"4"
+
+
+탑티어
+id:"1"
+title:"에어비앤비 플러스"
+subtitle:"퀄리티와 인테리어 디자인이 검증된 숙소 셀렉션"
+
+id:"2"
+title:"에어비앤비 Luxe"
+
+
+호스트 언어
+title:"한국어"
+id:"16384"
+subtitle:"세심하게 준비된 서비스를 제공하는 엄선된 럭셔리 숙소"
+
+
+
+지역
+
+서울
+id:"ChIJzWXFYYuifDUR64Pq5LTtioU"
+location_name:"Seoul"
+display_name:"Seoul"
+
+대구
+id:"ChIJ1a3vsrjjZTURMC44oCngkro"
+location_name:"Daegu"
+display_name:"Daegu"
+
+대전
+id:"ChIJAWZKutdIZTURtdOKmJ3WltE"
+location_name:"Daejeon, South Korea"
+
+부산
+id:"ChIJNc0j6G3raDURpwhxJHTL2DU"
+location_name:"Busan, South Korea"
+
+경기
+id:"ChIJjbZ-5eR5fDURwrX21pgfDAE"
+location_name:"Gyeonggi-do, South Korea"
+
+인천
+id:"ChIJR4ITliVveTURQmG3LJD9N30"
+location_name:"Incheon"
+
+광주
+id:"ChIJr6f1ASOJcTURSPUlAe3S9AU"
+location_name:"Gwangju, South Korea"
+
+울산
+id:"ChIJgd6y4osuZjURATHZM3P6g3A"
+location_name:"Ulsan, South Korea"
+
+세종
+id:"ChIJcdevzq3SejURyUxEzD6HQKQ"
+location_name:"Sejong Metropolitan Autonomous City Office of Education, Geumnam-myeon, Geumnam-myeon, South Korea"
+
+경주
+id:"ChIJHQMN-EZOZjURCcjQz-6WFTc"
+location_name:"Gyeongju-si, Gyeongsangbuk-do, South Korea"
+
+강원
+id:"ChIJiY2WWew3YjURbnqgJX0MFQ4"
+location_name:"Gangwon-do, South Korea"
+
+제주
+id:"ChIJ_XltioXgDDUR4pyR4WmImks"
+location_name:"Jeju, Jeju-do"
+
+전주
+id:"ChIJY9gWA0MjcDURmkLDkeAXvMc"
+location_name:"Jeonju-si, Jeollabuk-do, South Korea"
+
+강릉
+id:"ChIJWw9PleHlYTURRh09nFHGt4A"
+location_name:"Gangneung-si, Gangwon-do, South Korea"
