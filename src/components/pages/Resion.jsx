@@ -2,33 +2,35 @@
 
 import React from "react";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import ResionCont from "../layout/ResionCont";
 import Loader from "../layout/Loader";
 
 const Resion = () => {
     const { resionCode } = useParams();
+    const location = useLocation();
+    const id = location.state.id;
     const [selectCategory, setSelectCategory] = useState([]);
 
     useEffect(() => {
-        fetch(
-            `https://raw.githubusercontent.com/Kim-chanmi/react-team/main/src/components/utils/${resionCode}.json`
-        )
-            .then((response) => response.json())
-            .then((result) => setSelectCategory(result.data))
-            // .then((result) => console.log(result.data))
-            .catch((error) => console.log("error", error));
-    }, [resionCode]);
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'cd899b7274msh596cd06f630aefdp1b8282jsn72ce399608b0',
+            'X-RapidAPI-Host': 'airbnb19.p.rapidapi.com'
+        }
+    };
+    
+    fetch(`https://airbnb19.p.rapidapi.com/api/v1/searchPropertyByPlace?id=${id}&display_name=${resionCode}&totalRecords=12&currency=KRW&category=TAB_8253&adults=1&checkout=2023-01-11&languageId=ko-KR`, options)
+        .then((response) => response.json())
+        .then((result) => setSelectCategory(result.data))
+        // .then((result) => console.log(result.data))
+        .catch((error) => console.log("error", error));
+
+    }, []);
 
     if (!selectCategory) return <Loader />;
-
-    // 임시 스크립트(airbnb api로 넘어갈시 삭제)
-    const resionBomCard = document.querySelectorAll(".resionBomCard");
-    resionBomCard.forEach((e, i) => {
-        if (i > 11) {
-            resionBomCard[i].style.display = "none";
-        }
-    });
 
     return <ResionCont selectCategory={selectCategory} />;
 };

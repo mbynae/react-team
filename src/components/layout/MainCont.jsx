@@ -3,10 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { mainText } from "../utils/maintext";
 
-function MainTextName({ imgName, resionName, resionCode }) {
+function MainTextName({ imgName, resionName, resionCode, id }) {
     return (
         <div className="resion">
-            <Link to={`/resion/${resionCode}`}>
+            {/* <Link to={`/resion/${resionCode}?id=${id}`}> */}
+            <Link to={`/resion/${resionCode}`} state={{id: id}}>
                 <img src={`img/${imgName}`} alt={resionName} />
             </Link>
             <span>{resionName}</span>
@@ -107,6 +108,7 @@ const MainCont = () => {
                             imgName={info.imgName}
                             resionName={info.resionName}
                             resionCode={info.resionCode}
+                            id={info.id}
                         />
                     ))}
                 </div>
