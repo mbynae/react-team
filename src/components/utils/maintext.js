@@ -6,7 +6,7 @@ export const mainText = [
         resionName: "서울",
         resionCode: "Seoul",
         id: "ChIJzWXFYYuifDUR64Pq5LTtioU",
-        location_name: "Seoul"
+        location_name: "Seoul",
     },
     {
         imgName: "resion02.jpg",
@@ -34,7 +34,7 @@ export const mainText = [
         resionName: "대전",
         resionCode: "Daejeon",
         id: "ChIJAWZKutdIZTURtdOKmJ3WltE",
-        location_name:"Daejeon, South Korea"
+        location_name:"Daejeon, South Korea",
     },
     {
         imgName: "resion06.jpg",

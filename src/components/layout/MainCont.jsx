@@ -3,30 +3,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { mainText } from "../utils/maintext";
 
-function MainTextName({ imgName, resionName, resionCode, id }) {
-    return (
-        <div className="resion">
-            {/* <Link to={`/resion/${resionCode}?id=${id}`}> */}
-            <Link to={`/resion/${resionCode}`} state={{id: id}}>
-                <img src={`img/${imgName}`} alt={resionName} />
-            </Link>
-            <span>{resionName}</span>
-        </div>
-    );
+function MainTextName({ imgName, resionName, resionCode, id, num }) {
+    if(num <= 11){
+        return (
+            <div className="resion">
+                <Link to={`/resion/${resionCode}`} state={{id: id}}>
+                    <img src={`img/${imgName}`} alt={resionName} />
+                </Link>
+                <span>{resionName}</span>
+            </div>
+        );
+    }
 }
 
 const MainCont = () => {
-    // const [selectCategory, setSelectCategory] = useState("서울");
-
-    // useEffect(() => {
-    //     fetch(
-    //         "https://raw.githubusercontent.com/Kim-chanmi/react-team/main/src/components/utils/Seoul.json"
-    //     )
-    //         .then((response) => response.json())
-    //         .then((result) => console.log(result.data))
-    //         .catch((error) => console.log("error", error));
-    // }, [selectCategory]);
-
     return (
         <section id="contentsType" className="container">
             <div className="contents__top">
@@ -109,6 +99,7 @@ const MainCont = () => {
                             resionName={info.resionName}
                             resionCode={info.resionCode}
                             id={info.id}
+                            num={index}
                         />
                     ))}
                 </div>

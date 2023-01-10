@@ -45,105 +45,6 @@ const resionText = [
     },
 ];
 
-// const resionText2 = [
-//     {
-//         imgName: "resionBom01.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-//     {
-//         imgName: "resionBom02.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-//     {
-//         imgName: "resionBom03.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-//     {
-//         imgName: "resionBom04.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-//     {
-//         imgName: "resionBom05.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-//     {
-//         imgName: "resionBom06.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-//     {
-//         imgName: "resionBom07.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-//     {
-//         imgName: "resionBom08.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-//     {
-//         imgName: "resionBom09.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-//     {
-//         imgName: "resionBom10.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-//     {
-//         imgName: "resionBom11.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-//     {
-//         imgName: "resionBom12.jpg",
-//         Title: "Seogwipo-si의 아파트",
-//         star: "★ 4.52",
-//         bed: "침대1개",
-//         price1: "₩1,510,703",
-//         price2: "₩865,561/월",
-//     },
-// ];
-
 function ResionTextName({ classTitle, imgName, title, bed, price1, price2 }) {
     return (
         <div className={`resionTopCard ${classTitle}`}>
@@ -173,7 +74,7 @@ function ResionTextName2({ img, Title, star, bed, price2 }) {
     );
 }
 
-const ResionCont = ({ selectCategory }) => {
+const ResionCont = ({ selectCategory, recommendedCate }) => {
     const { resionCode } = useParams();
     return (
         <section id="contentsType" className="container">
@@ -188,15 +89,26 @@ const ResionCont = ({ selectCategory }) => {
                     Wed 11/18
                 </div>
                 <div className="resion__inner">
-                    {resionText.map((info, index) => (
+                    {/* {resionText.map((info, index) => (
                         <ResionTextName
                             key={index}
                             classTitle={info.classTitle}
                             imgName={info.imgName}
                             title={info.title}
+                            bed={info.bed}
+                            price1={info.price1}
+                            price2={info.price2}
+                        />
+                    ))} */}
+                    {recommendedCate.map((info, index) => (
+                        <ResionTextName 
+                            key={index}
+                            classTitle={`resionCard1${index+1}`}
+                            title={info.listingName}
+                            imgName={info.images[0]}
                             bed={info.listingBedLabel}
-                            price1={info.originalPrice}
-                            price2={info.discountedPrice}
+                            price1={info?.discountedPrice}
+                            price2={info.accessibilityLabel}
                         />
                     ))}
                 </div>

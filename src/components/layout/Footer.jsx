@@ -5,7 +5,7 @@ const Footer = () => {
     <footer id="footer">
       <div className="footer__inner">
         <div className="footer__left">
-          <img src="img/footerLogo.png" alt="로고" />
+          <img src={`${process.env.PUBLIC_URL}/img/footerLogo.png`} alt="로고" />
         </div>
         <div className="footer__center">
           <div className="top">
@@ -34,9 +34,9 @@ const Footer = () => {
             <option value="korea won">korea won</option>
           </select>
           <div className="sns">
-            <img src="img/netlify.jpg" alt="netlify" />
-            <img src="img/github.jpg" alt="github" />
-            <img src="img/figma.jpg" alt="figma" />
+            <img src={`${process.env.PUBLIC_URL}/img/netlify.jpg`} alt="netlify" />
+            <img src={`${process.env.PUBLIC_URL}/img/github.jpg`} alt="github" />
+            <img src={`${process.env.PUBLIC_URL}/img/figma.jpg`} alt="figma" />
           </div>
         </div>
       </div>
