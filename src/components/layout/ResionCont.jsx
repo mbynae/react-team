@@ -48,7 +48,7 @@ const resionText = [
 function ResionTextName({ classTitle, imgName, title, bed, price1, price2 }) {
     return (
         <div className={`resionTopCard ${classTitle}`}>
-            <img src={`/img/${imgName}`} alt="호텔룸" />
+            <img src={`${process.env.PUBLIC_URL}/img/${imgName}`} alt="호텔룸" />
             <div className="resionDesc">
                 <div className="descTitle">{title}</div>
                 <div className="bed">{bed}</div>
@@ -74,7 +74,7 @@ function ResionTextName2({ img, Title, star, bed, price2 }) {
     );
 }
 
-const ResionCont = ({ selectCategory, recommendedCate }) => {
+const ResionCont = ({ selectCategory, year, month, date, week }) => {
     const { resionCode } = useParams();
     return (
         <section id="contentsType" className="container">
@@ -82,14 +82,14 @@ const ResionCont = ({ selectCategory, recommendedCate }) => {
                 <h2>Recommended Hotels in {resionCode}</h2>
                 <div className="checkinDate">
                     <img src="/img/resionCalender.svg" alt="달력" />
-                    Wed 11/17
+                    {week[new Date().getDay()]} {month}/{date}
                 </div>
                 <div className="checkoutDate">
                     <img src="/img/resionCalender.svg" alt="달력" />
-                    Wed 11/18
+                    {week[new Date().getDay()+1]} {month}/{date+1}
                 </div>
                 <div className="resion__inner">
-                    {/* {resionText.map((info, index) => (
+                    {resionText.map((info, index) => (
                         <ResionTextName
                             key={index}
                             classTitle={info.classTitle}
@@ -99,23 +99,23 @@ const ResionCont = ({ selectCategory, recommendedCate }) => {
                             price1={info.price1}
                             price2={info.price2}
                         />
-                    ))} */}
-                    {recommendedCate.map((info, index) => (
+                    ))}
+                    {/* {recommendedCate.map((info, index) => (
                         <ResionTextName 
                             key={index}
                             classTitle={`resionCard1${index+1}`}
                             title={info.listingName}
                             imgName={info.images[0]}
                             bed={info.listingBedLabel}
-                            price1={info?.discountedPrice}
+                            price1={info.discountedPrice}
                             price2={info.accessibilityLabel}
                         />
-                    ))}
+                    ))} */}
                 </div>
                 <div className="resionBom__card">
                     <h2>{resionCode} 인근 숙소</h2>
                     <div className="resionbomDate">
-                        11월 17일 목 ~ 11월 18일 금
+                        {month}월 {date}일 {week[new Date().getDay()]} ~ {month}월 {date+1}일 {week[new Date().getDay()+1]}
                     </div>
                     <div className="resionBom__inner">
                         {selectCategory.map((info, index) => (

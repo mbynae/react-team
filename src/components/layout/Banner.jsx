@@ -2,7 +2,7 @@
 
 import React from "react";
 
-const Banner = () => {
+const Banner = ({calendar}) => {
     return (
         <section id="bannerType">
             <img src="/img/banner.jpg" alt="배너이미지" />
@@ -18,7 +18,7 @@ const Banner = () => {
                                 type="text"
                                 id="region"
                                 name="region"
-                                placeholder="도시 또는 호텔을 입력해주세요."
+                                placeholder="도시를 입력해주세요."
                                 required
                             />
                         </div>
@@ -28,7 +28,7 @@ const Banner = () => {
                                 type="date"
                                 id="start_date"
                                 name="start_date"
-                                defaultValue="2022-11-21"
+                                defaultValue={calendar}
                                 required
                             />
                             <span className="date_hyphen">-</span>
@@ -36,7 +36,7 @@ const Banner = () => {
                                 type="date"
                                 id="last_date"
                                 name="last_date"
-                                defaultValue="2022-11-23"
+                                defaultValue={calendar}
                                 required
                             />
                             {/* <span>11/18 금 - 11/19 토</span>  */}

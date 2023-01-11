@@ -43,7 +43,7 @@ const Header = () => {
                                 type="text"
                                 id="region"
                                 name="region"
-                                placeholder="도시/호텔을 적어주세요."
+                                placeholder="도시를 적어주세요."
                                 required
                             />
                         </div>
