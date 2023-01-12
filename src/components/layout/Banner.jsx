@@ -32,7 +32,13 @@ const Banner = ({ calendar, calendar2 }) => {
 
     const onSearch = () => {
         mainText.map((e)=>(
-            e.resionName.includes(region) && navigate(`/resion/${e.resionCode}`, {state: {id: e.id}})    
+            e.resionName.includes(region) && navigate(`/resion/${e.resionCode}`, {state: {
+                id: e.id,
+                start_date: start_date,
+                last_date: last_date,
+                room: room,
+                tourist: tourist
+            }})    
         ));
 
         setInputs({
@@ -53,9 +59,8 @@ const Banner = ({ calendar, calendar2 }) => {
                     <legend className="ir">호텔 검색</legend>
                     <Home region={region} onChange={onChange} />
                     <Calender start_date={start_date} last_date={last_date} onChange={onChange} />
-                    <Guest room={room} tourist={tourist} />
-                    <SearchBtn onSearch={onSearch} region={region} start_date={start_date} last_date={last_date} room={room} tourist={tourist} />
-                    {/* <div>{last_date}</div> */}
+                    <Guest room={room} tourist={tourist} onChange={onChange} />
+                    <SearchBtn onSearch={onSearch} />
                 </div>
             </div>
         </section>

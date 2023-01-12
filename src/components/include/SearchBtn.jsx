@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchBtn = ({ onSearch, region, start_date, last_date, room, tourist }) => {
+const SearchBtn = ({ onSearch }) => {
 
     return (
         <button className="searchBtn" onClick={onSearch}>

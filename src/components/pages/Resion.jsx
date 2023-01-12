@@ -9,6 +9,10 @@ import Loader from "../layout/Loader";
 const Resion = ({ calendar, calendar2, year, month, date, week }) => {
     const location = useLocation();
     const id = location.state.id;
+    const start_date = location.state.start_date;
+    const last_date = location.state.last_date;
+    const room = location.state.room;
+    const tourist = location.state.tourist;
     const [selectCategory, setSelectCategory] = useState([]);
 
     useEffect(() => {
@@ -21,7 +25,7 @@ const Resion = ({ calendar, calendar2, year, month, date, week }) => {
         };
 
         fetch(
-            `https://airbnb19.p.rapidapi.com/api/v1/searchPropertyByPlace?id=${id}&totalRecords=12&currency=KRW&category=TAB_8253&adults=1&checkin=${calendar}&checkout=${calendar2}&languageId=ko-KR`,
+            `https://airbnb19.p.rapidapi.com/api/v1/searchPropertyByPlace?id=${id}&totalRecords=12&currency=KRW&category=TAB_8253&adults=1&checkin=${start_date}&checkout=${last_date}&languageId=ko-KR`,
             options
         )
             .then((response) => response.json())
@@ -33,7 +37,7 @@ const Resion = ({ calendar, calendar2, year, month, date, week }) => {
 
     if (!selectCategory) return <Loader />;
 
-    return <ResionCont selectCategory={selectCategory} year={year} month={month} date={date} week={week} />;
+    return <ResionCont selectCategory={selectCategory} calendar={calendar} calendar2={calendar2} year={year} month={month} date={date} week={week} start_date={start_date} last_date={last_date} />;
 };
 
 export default Resion;

@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import KakaoMap from "./KakaoMap";
+// import KakaoMap from "./KakaoMap";
 
 // { useRef, useEffect }
 

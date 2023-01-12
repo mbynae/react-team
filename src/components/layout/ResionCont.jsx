@@ -74,8 +74,9 @@ function ResionTextName2({ img, Title, star, bed, price2 }) {
     );
 }
 
-const ResionCont = ({ selectCategory, year, month, date, week }) => {
+const ResionCont = ({ selectCategory, calendar, calendar2, year, month, date, week, start_date, last_date }) => {
     const { resionCode } = useParams();
+    console.log(calendar)
     return (
         <section id="contentsType" className="container">
             <div className="resionTop">
@@ -115,7 +116,7 @@ const ResionCont = ({ selectCategory, year, month, date, week }) => {
                 <div className="resionBom__card">
                     <h2>{resionCode} 인근 숙소</h2>
                     <div className="resionbomDate">
-                        {month}월 {date}일 {week[new Date().getDay()]} ~ {month}월 {date+1}일 {week[new Date().getDay()+1]}
+                        {start_date.split('-')[1]}월 {start_date.split('-')[2]}일 {week[new Date(start_date).getDay()]} ~ {last_date.split('-')[1]}월 {Number(last_date.split('-')[2])+1}일 {week[new Date(last_date).getDay()+1]}
                     </div>
                     <div className="resionBom__inner">
                         {selectCategory.map((info, index) => (
@@ -135,4 +136,11 @@ const ResionCont = ({ selectCategory, year, month, date, week }) => {
     );
 };
 
+ResionCont.defaultProps = {
+    start_date: new Date().toLocaleDateString().replaceAll(".", "-"),
+    last_date: new Date().toLocaleDateString().replaceAll(".", "-")
+}
+
 export default ResionCont;
+
+
