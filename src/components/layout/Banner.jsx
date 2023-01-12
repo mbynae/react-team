@@ -1,10 +1,12 @@
 /** @format */
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Home from "../include/Home";
 import Calender from "../include/Calender";
 import Guest from "../include/Guest";
 import SearchBtn from "../include/SearchBtn";
+import { mainText } from "../utils/maintext";
 
 const Banner = ({ calendar, calendar2 }) => {
     const [inputs, setInputs] = useState({
@@ -14,6 +16,8 @@ const Banner = ({ calendar, calendar2 }) => {
         room: "1개",
         tourist: "1명",
     });
+
+    const navigate = useNavigate();
 
     const { region, start_date, last_date, room, tourist } = inputs;
 
@@ -27,6 +31,10 @@ const Banner = ({ calendar, calendar2 }) => {
     };
 
     const onSearch = () => {
+        mainText.map((e)=>(
+            e.resionName.includes(region) && navigate(`/resion/${e.resionCode}`, {state: {id: e.id}})    
+        ));
+
         setInputs({
             region: "",
             start_date: calendar,
@@ -44,9 +52,10 @@ const Banner = ({ calendar, calendar2 }) => {
                 <div className="roomSearch">
                     <legend className="ir">호텔 검색</legend>
                     <Home region={region} onChange={onChange} />
-                    <Calender start_date={start_date} last_date={last_date} />
+                    <Calender start_date={start_date} last_date={last_date} onChange={onChange} />
                     <Guest room={room} tourist={tourist} />
                     <SearchBtn onSearch={onSearch} region={region} start_date={start_date} last_date={last_date} room={room} tourist={tourist} />
+                    {/* <div>{last_date}</div> */}
                 </div>
             </div>
         </section>

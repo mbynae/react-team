@@ -15,8 +15,7 @@ const App = () => {
     let year = new Date().getFullYear();
     let month = new Date().getMonth() + 1 < 10 ? `0${new Date().getMonth() + 1}` : new Date().getMonth() + 1;
     let date = new Date().getDate() < 10 ? `0${new Date().getDate()}` : new Date().getDate();
-    let week = new Array("일", "월", "화", "수", "목", "금", "토");
-    // let calendar = `${year}-${month}-${date}`;
+    let week = ["일", "월", "화", "수", "목", "금", "토"];
     let calendar = `${year}-${month}-${date}`;
     let calendar2 = `${year}-${month}-${date + 1}`;
 
